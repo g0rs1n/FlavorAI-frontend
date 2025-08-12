@@ -44,3 +44,32 @@ export type TRegisterOptions<T extends FieldValues> = RegisterOptions<T>
 export type TUseFormRegister<T extends FieldValues> = UseFormRegister<T>
 export type TFieldError = FieldError
 export type TPath<T> = Path<T>
+
+// Recipe Type
+
+export interface IRecipe {
+  id: number;
+  authorId: number;
+  title: string;
+  description?: string | null;
+  ingredients: string;
+  instructions: string;
+}
+
+// Ratings Type 
+
+export interface IRating {
+  id: number;
+  userId: number;
+  recipeId: number;
+  score: number;
+}
+
+// Add Recipe Form types
+
+export interface IFormAddRecipeInput {
+    title: string;
+    description?: string;
+    ingredients: string;
+    instructions: string;
+}
