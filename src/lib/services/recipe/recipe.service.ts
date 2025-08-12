@@ -7,6 +7,7 @@ class RecipeService {
 
     private readonly GET_ALL_RECIPES = API_ROUTES.RECIPE.GET_ALL
     private readonly POST_CREATE_RECIPE = API_ROUTES.RECIPE.POST_CREATE_RECIPE
+    private readonly GET_MY_RECIPE = API_ROUTES.RECIPE.GET_MY_RECIPE
 
     async getAllRecipe (): Promise<IRecipe[]> {
         try {
@@ -23,6 +24,15 @@ class RecipeService {
             return response.data
         } catch (error) {
             catchError(error, "Failed to create new Recipe")
+        }
+    }
+
+    async getMyRecipe (): Promise<IRecipe[]> {
+        try {
+            const response = await axiosClient.get(this.GET_MY_RECIPE)
+            return response.data
+        } catch (error) {
+            catchError(error, "Failed to fetch my Recipe")
         }
     }
 

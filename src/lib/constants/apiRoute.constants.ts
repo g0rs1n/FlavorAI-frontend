@@ -18,7 +18,8 @@ class ROUTES {
 
     RECIPE = {
         GET_ALL: this.BASE_RECIPE_URL,
-        POST_CREATE_RECIPE: this.BASE_RECIPE_URL
+        POST_CREATE_RECIPE: this.BASE_RECIPE_URL,
+        GET_MY_RECIPE: `${this.BASE_RECIPE_URL}/my`
     }
 
 }

@@ -10,6 +10,7 @@ import {
 
 import QueryProvider from "@/lib/providers/QueryProvider";
 import ToasterS from "@/components/ui/Toaster/Toaster";
+import NProgress from "@/components/ui/Nprogress/Nprogress";
 
 import "../styles/globals.scss"
 
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${nunito.variable}`}
       >
+        <NProgress/>
         <QueryProvider>
           {children}
           <ToasterS/>

@@ -48,20 +48,21 @@ export type TPath<T> = Path<T>
 // Recipe Type
 
 export interface IRecipe {
-  id: number;
-  authorId: number;
+  id: string;
+  authorId: string;
   title: string;
   description?: string | null;
   ingredients: string;
   instructions: string;
+  avarageRating: number;
 }
 
 // Ratings Type 
 
 export interface IRating {
-  id: number;
-  userId: number;
-  recipeId: number;
+  id: string;
+  userId: string;
+  recipeId: string;
   score: number;
 }
 

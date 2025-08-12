@@ -6,6 +6,7 @@ import { userService } from "@/lib/services/user/user.service"
 import { IUserData } from "@/lib/types/types"
 import Loader from "@/components/ui/Loader/Loader"
 import GlobalError from "../error"
+import ExitButton from "@/components/ui/ExitButton/ExitButton"
 
 interface IAuthLayoutProps {
     children: React.ReactNode
@@ -39,12 +40,13 @@ export default function AppLayout (
     return (
         <>
             <div
-                className="flex flex-col h-full"
+                className="flex flex-col h-full relative"
             >
                 <Header
                     userData={data}
                 />
                 {children}
+                <ExitButton/>
             </div>
         </>
     )

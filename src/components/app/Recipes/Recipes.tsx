@@ -38,12 +38,11 @@ export default function Recipes () {
                 className="flex flex-col h-full"
             >
                 {
-                    data ?
-                    <RecipeList
-                        data={data}
-                    />
-                    :
-                    <NoDataItem/>
+                    data && data.length > 0 ? (
+                        <RecipeList dataR={data} />
+                    ) : (
+                        <NoDataItem />
+                    )
                 }
             </div>
         </>
